@@ -40,8 +40,7 @@ To
 you may add the following to your config/initializers/spree.rb
 
 ```shell
-country = Spree::Country.find_by_iso("DE")
-config.default_country_id = country.id if country.present?
+config.default_country_iso = "DE"
 
 config.address_requires_state = false
 config.checkout_zone = "Deutschland"
