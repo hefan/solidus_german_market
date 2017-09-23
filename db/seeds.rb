@@ -10,14 +10,13 @@ if germany.present?
   
   zone = Spree::Zone.find_or_create_by(name: "Deutschland")
   zone.description = "Deutschland"
-  zone.default_tax = true
   zone.country_ids = [germany.id]
   zone.save!
 
   tax_cat_1 = Spree::TaxCategory.find_or_create_by(name: "Standard") 
   tax_cat_1.deleted_at = false
   tax_cat_1.description = "Standard Mehrwertsteuer Deutschland"
-  tax_cat_1.is_default = true
+  tax_cat_1.is_default = false
   tax_cat_1.save!
 
   tax_cat_2 = Spree::TaxCategory.find_or_create_by(name: "Lebensmittel") 
