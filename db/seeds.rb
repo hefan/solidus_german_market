@@ -30,7 +30,7 @@ if germany.present?
   tax_rate_1.deleted_at = false
   tax_rate_1.amount = 0.19
   tax_rate_1.zone = zone
-  tax_rate_1.tax_category = tax_cat_1
+  tax_rate_1.tax_categories = [tax_cat_1]
   tax_rate_1.show_rate_in_label = true
   tax_rate_1.included_in_price = true
   tax_rate_1.calculator_type = "Spree::Calculator::DefaultTax"
@@ -40,7 +40,7 @@ if germany.present?
   tax_rate_2.deleted_at = false
   tax_rate_2.amount = 0.07
   tax_rate_2.zone = zone
-  tax_rate_2.tax_category = tax_cat_2
+  tax_rate_2.tax_categories = [tax_cat_2]
   tax_rate_2.show_rate_in_label = true
   tax_rate_2.included_in_price = true
   tax_rate_2.calculator_type = "Spree::Calculator::DefaultTax"
